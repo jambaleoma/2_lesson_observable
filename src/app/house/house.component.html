@@ -1,0 +1,15 @@
+<div id="over">
+    <img class="houseImage" src="{{pathHouse}}" alt="{{pathHouse}}">
+  </div>
+<div class="card-container">
+  <button *ngIf="!isSubscribeToNewspaper" class="card card-small" tabindex="0" mat-raised-button matBadge="{{newsPaperRecived}}"
+    matBadgePosition="before" matBadgeColor="accent" [color]="getButtonColour(isSubscribeToNewspaper)" (click)="subscribeToNewspaper()">
+    <span>Iscriviti al Giornale</span>
+  </button>
+
+  <button *ngIf="isSubscribeToNewspaper" class="card card-small" tabindex="0" mat-raised-button matBadge="{{newsPaperRecived}}"
+  matBadgePosition="before" [color]="getButtonColour(isSubscribeToNewspaper)" (click)="unSubscribeToNewspaper()">
+  <span>Disiscriviti al Giornale</span>
+</button>
+
+</div>
