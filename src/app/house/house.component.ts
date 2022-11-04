@@ -20,14 +20,10 @@ export class HouseComponent {
 
   subscribeToNewspaper() {
     this.isSubscribeToNewspaper = !this.isSubscribeToNewspaper;
-    this.sottoscrizione$ = this.newspaperService.npe$.subscribe((n) => {
-      this.newsPaperRecived = n;
-    })
   }
 
   unSubscribeToNewspaper() {
     this.isSubscribeToNewspaper = !this.isSubscribeToNewspaper;
-    this.sottoscrizione$.unsubscribe();
   }
 
   getButtonColour(isSub: boolean) {
