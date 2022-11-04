@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   templateUrl: './house.component.html',
   styleUrls: ['./house.component.scss']
 })
-export class HouseComponent implements OnInit {
+export class HouseComponent {
 
   @Input() pathHouse: string | undefined;
   public newsPaperRecived: number | undefined;
@@ -17,10 +17,6 @@ export class HouseComponent implements OnInit {
   constructor(
     private newspaperService: NewspaperService
   ) { }
-
-  ngOnInit(): void {
-    console.log(this.pathHouse);
-  }
 
   subscribeToNewspaper() {
     this.isSubscribeToNewspaper = !this.isSubscribeToNewspaper;
